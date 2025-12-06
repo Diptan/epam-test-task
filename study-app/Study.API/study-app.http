@@ -1,0 +1,74 @@
+@baseUrl = http://localhost:5017/api/studygroup
+
+### ==================== STUDY GROUP ENDPOINTS ====================
+
+### Create Study Group - Math
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "name": "Calculus Study",
+  "subject": 0
+}
+
+###
+
+### Create Study Group - Chemistry
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "name": "Organic Chemistry2",
+  "subject": 1
+}
+
+###
+
+### Create Study Group - Physics
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "name": "Quantum Physics",
+  "subject": 2
+}
+
+###
+
+### Get All Study Groups
+GET {{baseUrl}}
+
+###
+
+### Get All Study Groups - Filter by Subject (Math)
+GET {{baseUrl}}?subject=Math
+
+###
+
+### Get All Study Groups - Sort by Oldest First
+GET {{baseUrl}}?sortOrder=asc
+
+###
+
+### Get All Study Groups - Filter by Subject and Sort Newest First
+GET {{baseUrl}}?subject=Physics&sortOrder=desc
+
+###
+
+### Get Study Group by ID
+GET {{baseUrl}}/1
+
+###
+
+### Join Study Group (User 1 joins Study Group 1)
+POST {{baseUrl}}/1/join/1
+
+###
+
+### Join Study Group (User 2 joins Study Group 1)
+POST {{baseUrl}}/1/join/2
+
+###
+
+### Leave Study Group (User 1 leaves Study Group 1)
+POST {{baseUrl}}/1/leave/1
