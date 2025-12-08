@@ -122,5 +122,22 @@ namespace Study.API.Data.Repositories
             studyGroup.RemoveUser(user);
             await _context.SaveChangesAsync();
         }
+
+        public async Task DeleteStudyGroup(int studyGroupId)
+        {
+            var studyGroup = await _context.StudyGroups
+                .Include(sg => sg.Users)
+                .FirstOrDefaultAsync(sg => sg.StudyGroupId == studyGroupId);
+
+            if (studyGroup == null)
+                throw new KeyNotFoundException($"Study group with ID {studyGroupId} not found.");
+
+            // Clear all user associations before deleting the study group
+            studyGroup.Users.Clear();
+            await _context.SaveChangesAsync();
+
+            _context.StudyGroups.Remove(studyGroup);
+            await _context.SaveChangesAsync();
+        }
     }
 }

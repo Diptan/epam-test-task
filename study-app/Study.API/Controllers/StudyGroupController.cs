@@ -174,4 +174,28 @@ public class StudyGroupController : ControllerBase
             );
         }
     }
+
+    /// <summary>
+        /// Deletes a study group by ID
+        /// </summary>
+    [HttpDelete("{id:int}")]
+    public async Task<IActionResult> DeleteStudyGroup(int id)
+    {
+        try
+        {
+            var studyGroup = await _studyGroupRepository.GetStudyGroupById(id);
+            if (studyGroup == null)
+                return NotFound($"Study group with ID {id} not found.");
+
+            await _studyGroupRepository.DeleteStudyGroup(id);
+            return NoContent();
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(
+                500,
+                $"An error occurred while deleting the study group: {ex.Message}"
+            );
+        }
+    }
 }

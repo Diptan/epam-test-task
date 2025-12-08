@@ -11,4 +11,5 @@ public interface IStudyGroupRepository
     Task<bool> StudyGroupExistsForSubject(Subject subject);
     Task JoinStudyGroup(int studyGroupId, int userId);
     Task LeaveStudyGroup(int studyGroupId, int userId);
+    Task DeleteStudyGroup(int studyGroupId);
 }
