@@ -36,3 +36,5 @@ app.MapControllers();
 app.SeedDatabase();
 
 app.Run();
+
+public partial class Program { }
