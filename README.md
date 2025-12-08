@@ -50,9 +50,7 @@ Yes, I have implemented a similar layered testing approach in a previous project
 In that project:
 1. The manual QA team first provided the full scope of manual test cases covering all functional and user journeys.
 2. The QA and Automation QA (AQA) teams jointly reviewed these cases, defined priorities, and determined the automation scope to ensure coverage for critical business flows.
-3. The AQA team then categorized tests by testing level, deciding whether each scenario should be automated as an integration (backend team) test, an E2E API test (aqa team), component (frontend team) or an E2E UI (aqa team) test depending on its business impact and technical complexity.<img width="468" height="59" alt="image" src="https://github.com/user-attachments/assets/5bde0c6f-df5c-4386-a79c-9f1840b3077e" />
-
-   
+3. The AQA team then categorized tests by testing level, deciding whether each scenario should be automated as an integration (backend team) test, an E2E API test (aqa team), component (frontend team) or an E2E UI (aqa team) test depending on its business impact and technical complexity.
 ---
 
 ## Assumptions About the Application
