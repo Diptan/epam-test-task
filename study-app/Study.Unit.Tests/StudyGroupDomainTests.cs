@@ -1,7 +1,7 @@
 using NUnit.Framework.Legacy;
 using Study.API.Data.Models;
 
-namespace Study.Tests.Unit
+namespace Study.Unit.Tests
 {
     [TestFixture]
     public class StudyGroupDomainTests

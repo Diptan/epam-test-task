@@ -61,7 +61,7 @@ namespace Study.API.Data.Repositories
                 null => query.OrderByDescending(sg => sg.CreateDate), // Default to newest first
                 _ => query.OrderByDescending(sg => sg.CreateDate)
             };
-
+            var gg = await query.ToListAsync();
             return await query.ToListAsync();
         }
 
@@ -121,31 +121,6 @@ namespace Study.API.Data.Repositories
 
             studyGroup.RemoveUser(user);
             await _context.SaveChangesAsync();
-        }
-
-        public async Task<User> CreateUser(User user)
-        {
-            if (user == null)
-                throw new ArgumentNullException(nameof(user));
-
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
-            
-            return user;
-        }
-
-        public async Task<IEnumerable<User>> GetUsers()
-        {
-            return await _context.Users
-                .Include(u => u.StudyGroups)
-                .ToListAsync();
-        }
-
-        public async Task<User?> GetUserById(int userId)
-        {
-            return await _context.Users
-                .Include(u => u.StudyGroups)
-                .FirstOrDefaultAsync(u => u.UserId == userId);
         }
     }
 }

@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Study.API", "Study.API\Stud
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Study.Unit.Tests", "Study.Unit.Tests\Study.Unit.Tests.csproj", "{CFD298C3-035F-4084-A41B-EDAA414CA031}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Study.Integration.Tests", "Study.Integration.Tests\Study.Integration.Tests.csproj", "{3E8948B8-06C5-4644-8D8A-E3D11A3B390B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{CFD298C3-035F-4084-A41B-EDAA414CA031}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFD298C3-035F-4084-A41B-EDAA414CA031}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFD298C3-035F-4084-A41B-EDAA414CA031}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E8948B8-06C5-4644-8D8A-E3D11A3B390B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E8948B8-06C5-4644-8D8A-E3D11A3B390B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E8948B8-06C5-4644-8D8A-E3D11A3B390B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E8948B8-06C5-4644-8D8A-E3D11A3B390B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
