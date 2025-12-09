@@ -13,7 +13,7 @@
 
 **Approach:** To ensure the new Study Groups feature meets all requirements, I adopt a layered testing strategy spanning Unit, Integration, and End-to-End (E2E) tests. While this approach conceptually aligns with the testing pyramid principles - promoting fast, reliable lower-level testing (shift-left approach) - in practice it takes a more integration-focused shape rather than a strict pyramid.
 
-While unit tests are useful for isolating small pieces of logic, my preference is to emphasize integration tests, as they more accurately reflect real-world scenarios by validating the interaction between controllers, services, repositories, and the database, rather than testing isolated methods. This provides higher confidence in overall system behavior, even if it results in a flatter or “hourglass-shaped” distribution of tests instead of a traditional pyramid.
+While unit tests are useful for isolating small pieces of logic, my preference is to emphasize integration tests, as they more accurately reflect real-world scenarios by validating the interaction between controllers, services, repositories, and the database, rather than testing isolated methods. This provides higher confidence in overall system behavior, even if it results in a flatter or “honeycomb-shaped” distribution of tests instead of a traditional pyramid.
 
 1. **Unit Tests** - test individual components in isolation (model validation, business logic, exceptions and errors handling tests).
    - Run in the build pipeline (part of CI process).
